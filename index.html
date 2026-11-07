@@ -40,24 +40,47 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:24px;color:#1E6B47;line-height:1}
 details[open] summary::after{content:"−"}
 details p{margin:0;padding:0 20px 18px;font-size:16px;line-height:1.6;color:#3C4741}
+.sticky{display:none}
+@media (max-width:640px){
+.top{font-size:11px!important;gap:4px 14px!important;padding:8px 10px!important}
+.wrap{padding:48px 18px!important}
+.hero{padding-top:32px!important;gap:28px!important}
+.hero h1{font-size:34px!important}
+.hero p{font-size:17px!important}
+.hero-btn,.final-btn{width:100%}
+.badges{grid-template-columns:1fr!important}
+.mock{transform:scale(.82);transform-origin:top center;margin-bottom:-75px}
+.box{padding:22px!important}
+.box h3{font-size:22px!important}
+.card{padding:18px}
+.offer{padding:28px 18px!important;border-radius:18px!important}
+.price{font-size:46px!important}
+.btn{font-size:17px;padding:16px 20px}
+.autora{justify-content:center;text-align:center}
+.foto{flex:0 0 150px!important;height:150px!important}
+summary{font-size:16px;padding:16px}
+.sticky{display:block;position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,248,243,.96);border-top:1px solid #E4DED3;z-index:50}
+.sticky .btn{width:100%;font-size:17px;padding:14px}
+body{padding-bottom:78px}
+}
 </style>
 </head>
 <body>
 
-<div style="background:#1E6B47;color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;padding:10px 16px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;text-align:center">
+<div class="top" style="background:#1E6B47;color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;padding:10px 16px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;text-align:center">
 <span>30 RECETAS</span><span>PLAN DE 4 SEMANAS</span><span>ACCESO INMEDIATO</span><span>PAGÁS CON MERCADO PAGO</span>
 </div>
 
-<section class="wrap" style="padding-top:64px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<section class="wrap hero" style="padding-top:64px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
 <div style="flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <span style="align-self:flex-start;background:#E3F1E8;color:#14492F;font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px">Combo digital · Recetario + Plan mensual</span>
 <h1 style="margin:0;font-size:clamp(36px,5vw,58px);line-height:1.05;font-weight:800">Bajá de peso en casa comiendo rico, sin dietas imposibles</h1>
 <p style="margin:0;font-size:19px;line-height:1.55;color:#3C4741">30 recetas fáciles y un plan organizado semana por semana para que sepas qué comer cada día, con ingredientes que conseguís en cualquier almacén.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-<a class="btn" href="#oferta">QUIERO EL COMBO</a>
+<a class="btn hero-btn" href="#oferta">QUIERO EL COMBO</a>
 <span style="font-size:15px;color:#3C4741">Pago único · [TU PRECIO] ARS</span>
 </div>
-<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px">
+<div class="badges" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px">
 <div class="badge"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E6B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Acceso inmediato</div>
 <div class="badge"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E6B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantía de [X] días</div>
 <div class="badge"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E6B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>Pago seguro con Mercado Pago</div>
@@ -65,7 +88,7 @@ details p{margin:0;padding:0 20px 18px;font-size:16px;line-height:1.6;color:#3C4
 </div>
 </div>
 <div style="flex:1 1 380px;min-width:0;display:flex;justify-content:center">
-<div style="position:relative;width:340px;max-width:100%;height:440px">
+<div class="mock" style="position:relative;width:340px;max-width:100%;height:440px">
 <div style="position:absolute;left:70px;top:30px;width:250px;height:340px;background:#F2C14E;border-radius:6px 14px 14px 6px;box-shadow:0 24px 50px rgba(20,35,27,.25);padding:28px 22px;display:flex;flex-direction:column;justify-content:space-between">
 <span style="font-size:12px;font-weight:800;letter-spacing:.1em">PLAN MENSUAL</span>
 <h3 style="margin:0;font-size:30px;line-height:1.05">4 semanas para bajar de peso en casa</h3>
@@ -128,13 +151,13 @@ details p{margin:0;padding:0 20px 18px;font-size:16px;line-height:1.6;color:#3C4
 </section>
 
 <section id="oferta" class="wrap" style="display:flex;justify-content:center;padding-top:80px;padding-bottom:80px">
-<div style="width:100%;max-width:560px;background:#fff;border:3px solid #1E6B47;border-radius:24px;padding:40px 32px;display:flex;flex-direction:column;gap:18px;text-align:center;box-shadow:0 20px 60px rgba(20,35,27,.12)">
+<div class="offer" style="width:100%;max-width:560px;background:#fff;border:3px solid #1E6B47;border-radius:24px;padding:40px 32px;display:flex;flex-direction:column;gap:18px;text-align:center;box-shadow:0 20px 60px rgba(20,35,27,.12)">
 <span style="align-self:center;background:#F2C14E;font-weight:800;font-size:13px;letter-spacing:.08em;padding:6px 14px;border-radius:999px">PRECIO DE LANZAMIENTO HASTA [FECHA]</span>
 <h2 style="margin:0;font-size:32px">Combo completo</h2>
 <p style="margin:0;font-size:16px;color:#3C4741">Recetario de 30 recetas + Plan mensual</p>
 <div style="display:flex;flex-direction:column;gap:4px;align-items:center">
 <span style="font-size:18px;color:#6B746F;text-decoration:line-through">Antes [PRECIO ANTERIOR] ARS</span>
-<span style="font-family:'Bricolage Grotesque',sans-serif;font-size:56px;font-weight:800;color:#1E6B47;line-height:1">[TU PRECIO]</span>
+<span class="price" style="font-family:'Bricolage Grotesque',sans-serif;font-size:56px;font-weight:800;color:#1E6B47;line-height:1">[TU PRECIO]</span>
 <span style="font-size:14px;font-weight:600;color:#3C4741">ARS · pago único</span>
 </div>
 <ul class="check">
@@ -172,8 +195,8 @@ details p{margin:0;padding:0 20px 18px;font-size:16px;line-height:1.6;color:#3C4
 </section>
 
 <section style="background:#E3F1E8">
-<div class="wrap" style="max-width:960px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;padding-top:64px;padding-bottom:64px">
-<div style="flex:0 0 200px;height:200px;border-radius:50%;background:#C9DDD0;border:2px dashed #1E6B47;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#14492F">[Tu foto]</div>
+<div class="wrap autora" style="max-width:960px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;padding-top:64px;padding-bottom:64px">
+<div class="foto" style="flex:0 0 200px;height:200px;border-radius:50%;background:#C9DDD0;border:2px dashed #1E6B47;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#14492F">[Tu foto]</div>
 <div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:12px">
 <h2 style="margin:0;font-size:30px">Hola, soy [Tu nombre]</h2>
 <p style="margin:0;font-size:17px;line-height:1.6;color:#3C4741">[Contá en 3 o 4 líneas quién sos, por qué armaste este recetario y este plan, y qué te funcionó a vos.]</p>
@@ -184,13 +207,15 @@ details p{margin:0;padding:0 20px 18px;font-size:16px;line-height:1.6;color:#3C4
 <section class="wrap" style="display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center;padding-top:80px;padding-bottom:80px">
 <h2 style="margin:0;font-size:clamp(30px,4vw,46px);max-width:760px">Empezá hoy: 30 recetas + tu plan del mes</h2>
 <p style="margin:0;font-size:18px;color:#3C4741">[TU PRECIO] ARS · pago único con Mercado Pago</p>
-<a class="btn" href="https://link.mercadopago.com.ar/TU-LINK">QUIERO EMPEZAR AHORA</a>
+<a class="btn final-btn" href="https://link.mercadopago.com.ar/TU-LINK">QUIERO EMPEZAR AHORA</a>
 </section>
 
 <footer style="background:#14231B;color:#C9D6CE;padding:32px 24px;font-size:13px;line-height:1.6;text-align:center">
 <p style="margin:0 0 8px">© [NOMBRE DE TU MARCA] · Producto 100% digital · Consultas: [tu WhatsApp o mail]</p>
 <p style="margin:0 auto;max-width:720px">Este material es informativo y no reemplaza la consulta con un médico o nutricionista. Los resultados dependen de cada persona. Si tenés alguna condición de salud, consultá a un profesional antes de cambiar tu alimentación.</p>
 </footer>
+
+<div class="sticky"><a class="btn" href="#oferta">QUIERO EL COMBO · [TU PRECIO] ARS</a></div>
 
 </body>
 </html>
